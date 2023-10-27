@@ -1,0 +1,44 @@
+ALGORITHM FindDistinctSum
+VAR
+    (Set1: ARRAY_OF_INTEGER[], Set2: ARRAY_OF_INTEGER[], 
+    sum, i := 0)  // Initialize to zero
+BEGIN
+   IF length(Set1) < 0 OR length(set2) < 0 THEN
+   BREAK.  // This to check if there is an element in the sets
+   END_IF
+   FOR i FROM 0 TO LENGTH(set1) - 1 DO
+        FOR j  FROM 0 TO LENGTH(set2) - 1 DO
+            IF set1[i] = set2[j] THEN
+            BREAK
+            END_IF
+        END_FOR        
+        Set1[i] = set2[j] := set3
+    END_FOR  
+    //if the element is not found in set2, add it to sum   
+        IF NOT found THEN   
+            sum := sum + set3 //add the value of set3
+        END_IF 
+
+
+        //check elements in set2
+
+
+    FOR j FROM 0 to LENGTH(set2) - 1 DO
+        IF set2[i] = set1[j] THEN
+        BREAK  //
+        END_IF
+    END_FOR
+
+        //Output sum of distinct elements.
+END
+
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------
+
+

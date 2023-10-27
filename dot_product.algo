@@ -1,0 +1,69 @@
+ALGORITHM DOT product
+VAR
+    v1, v2 (vectors of IR) // Declare v1, v2 
+    ps, i = INTEGER := 0  //Initialize to zero
+BEGIN
+   IF LENGTH(V1) == LENGTH(V2) THEN // all length are equal
+   FOR i from 1 to LENGTH(v1) DO
+        ps := ps + (v1[i] * v2[i])  //sum the multiple of v1 and v2 
+    END_FOR
+End Procedure
+
+END
+
+//--------------------------------FUNCTION METHOD------------------------------------
+
+FUNCTION dot_product(v1, v2) : INTEGER
+VAR
+    //create a variable to store the product of the vectors
+i, ps : INTEGER = 0
+
+   
+BEGIN
+    //check the length of both vectors to make sure they are same 
+        
+    IF (v1.LENGTH <> v2.LENGTH) THEN
+        Write("Vectors are not of equal length")
+        set_instructions
+    END_IF
+
+ // find the total sum of all the vector    
+FOR i FROM 0 TO prod_of_vector.LENGTH STEP 1  DO
+    ps = ps + (v1[i] * v2[i])
+END_FOR
+
+END
+
+
+
+
+//----------------------------PROCEDURE------------------------------------------------------------------------
+
+// Algorithm to take determine whether two vectors of given are orthogonal
+
+
+ALGORITHM Dot product(orthogonal) 
+  i,j : INTEGER := 0;
+
+BEGIN
+
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        FOR j FROM 0 TO 1 STEP 1  DO
+            // enter elements of vector pairs [i][j]
+            Read (vector_pairs[i][j])
+        END_FOR
+    END_FOR
+        // loop through vector pairs to check for orthogonality
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        FOR j FROM 1 TO n-1 STEP step  DO
+            IF (i<>j) THEN                                          // to ensure a vector pair is not multiplied by itself
+                dot_product (vector_pairs[i], vector_pairs[j])      // call procedure to get dot product of 2 vector pairs
+                IF (ps = 0) THEN                                    //
+                    Write ("Vector Pairs ", i " and ", j " are orthogonal")     // if vectors are orthogonal, write msg 
+                    ELSE
+                      Write ("Vector Pairs ", i " and ", j " are orthogonal")  
+                END_IF
+            END_IF
+        END_FOR
+    END_FOR
+END
